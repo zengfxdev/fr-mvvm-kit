@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FRMvvmKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A short description of FRMvvmKit."
 
   # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/zengfxios/fr-mvvm-kit"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
-  s.license      = "MIT (example)"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "zengfxios" => "zengfxios@gmail.com" }
 
   s.platform     = :ios, "8.0"
