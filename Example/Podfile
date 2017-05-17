@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'  # 官方库
+
+def shared_pods
+    pod 'FRLoggerKit'
+    pod 'ReactiveObjC', '~> 3.0.0'
+    pod 'FRNetworkingWithRACKit'
+end
+
+target :'FRMvvmKit-Demo' do
+    platform :ios, '8.0'
+    use_frameworks!
+    shared_pods
+end

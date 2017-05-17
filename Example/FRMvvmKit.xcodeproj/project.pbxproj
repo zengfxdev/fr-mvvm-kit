@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD5E4BC2BD032FFB26401DE4 /* Pods_FRMvvmKit_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B065BAF39608638F8DE4369 /* Pods_FRMvvmKit_Demo.framework */; };
+		D00A4DA61ECC414100BA1B11 /* FRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00A4DA51ECC414100BA1B11 /* FRViewController.m */; };
+		D088D6681ECBF2CD0065D5AD /* FRViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D088D6671ECBF2CD0065D5AD /* FRViewModel.m */; };
+		D088D66B1ECBF3150065D5AD /* RVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D088D66A1ECBF3150065D5AD /* RVMViewModel.m */; };
 		D09880EC1EB9DFF200C0DC75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09880EB1EB9DFF200C0DC75 /* main.m */; };
 		D09880EF1EB9DFF200C0DC75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D09880EE1EB9DFF200C0DC75 /* AppDelegate.m */; };
 		D09880F21EB9DFF200C0DC75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09880F11EB9DFF200C0DC75 /* ViewController.m */; };
@@ -16,6 +20,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0206D0143995EB5F5A6D8A3F /* Pods-FRMvvmKit-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRMvvmKit-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FRMvvmKit-Demo/Pods-FRMvvmKit-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		2B065BAF39608638F8DE4369 /* Pods_FRMvvmKit_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRMvvmKit_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9B63D577791BE36D02CE67 /* Pods-FRMvvmKit-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRMvvmKit-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRMvvmKit-Demo/Pods-FRMvvmKit-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		D00A4DA41ECC414100BA1B11 /* FRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewController.h; sourceTree = "<group>"; };
+		D00A4DA51ECC414100BA1B11 /* FRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRViewController.m; sourceTree = "<group>"; };
+		D088D6661ECBF2CD0065D5AD /* FRViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModel.h; sourceTree = "<group>"; };
+		D088D6671ECBF2CD0065D5AD /* FRViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRViewModel.m; sourceTree = "<group>"; };
+		D088D6691ECBF3150065D5AD /* RVMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVMViewModel.h; sourceTree = "<group>"; };
+		D088D66A1ECBF3150065D5AD /* RVMViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVMViewModel.m; sourceTree = "<group>"; };
+		D088D66C1ECBF3860065D5AD /* FRViewModelBecomeActiveProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelBecomeActiveProtocol.h; sourceTree = "<group>"; };
+		D088D66D1ECBF3E70065D5AD /* FRViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelProtocol.h; sourceTree = "<group>"; };
+		D088D66E1ECBF5D00065D5AD /* FRViewModelDidLoadViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelDidLoadViewProtocol.h; sourceTree = "<group>"; };
+		D088D66F1ECBF62A0065D5AD /* FRViewModelDidLayoutSubviewsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelDidLayoutSubviewsProtocol.h; sourceTree = "<group>"; };
+		D088D6701ECBF6AD0065D5AD /* FRViewModelLoadingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelLoadingProtocol.h; sourceTree = "<group>"; };
+		D088D6711ECBF73B0065D5AD /* FRViewModelToastProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelToastProtocol.h; sourceTree = "<group>"; };
+		D088D6721ECBFBBF0065D5AD /* FRViewModelEmptyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModelEmptyProtocol.h; sourceTree = "<group>"; };
 		D09880E71EB9DFF200C0DC75 /* FRMvvmKit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FRMvvmKit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09880EB1EB9DFF200C0DC75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D09880ED1EB9DFF200C0DC75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +53,91 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5E4BC2BD032FFB26401DE4 /* Pods_FRMvvmKit_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65D9FCDB19EEEC2732742CF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B065BAF39608638F8DE4369 /* Pods_FRMvvmKit_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B893EA1107FB974B0B7DD7B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E9B63D577791BE36D02CE67 /* Pods-FRMvvmKit-Demo.debug.xcconfig */,
+				0206D0143995EB5F5A6D8A3F /* Pods-FRMvvmKit-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D00A4DA31ECC40BF00BA1B11 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D00A4DA41ECC414100BA1B11 /* FRViewController.h */,
+				D00A4DA51ECC414100BA1B11 /* FRViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D088D65E1ECBF09A0065D5AD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D088D65F1ECBF09A0065D5AD /* Assets */,
+				D088D6611ECBF09A0065D5AD /* Classes */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		D088D65F1ECBF09A0065D5AD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D088D6611ECBF09A0065D5AD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D00A4DA31ECC40BF00BA1B11 /* ViewControllers */,
+				D088D6651ECBF2BC0065D5AD /* ViewModels */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D088D6651ECBF2BC0065D5AD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D088D6691ECBF3150065D5AD /* RVMViewModel.h */,
+				D088D66A1ECBF3150065D5AD /* RVMViewModel.m */,
+				D088D6661ECBF2CD0065D5AD /* FRViewModel.h */,
+				D088D6671ECBF2CD0065D5AD /* FRViewModel.m */,
+				D088D66C1ECBF3860065D5AD /* FRViewModelBecomeActiveProtocol.h */,
+				D088D66D1ECBF3E70065D5AD /* FRViewModelProtocol.h */,
+				D088D66E1ECBF5D00065D5AD /* FRViewModelDidLoadViewProtocol.h */,
+				D088D66F1ECBF62A0065D5AD /* FRViewModelDidLayoutSubviewsProtocol.h */,
+				D088D6701ECBF6AD0065D5AD /* FRViewModelLoadingProtocol.h */,
+				D088D6711ECBF73B0065D5AD /* FRViewModelToastProtocol.h */,
+				D088D6721ECBFBBF0065D5AD /* FRViewModelEmptyProtocol.h */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D09880DE1EB9DFF200C0DC75 = {
 			isa = PBXGroup;
 			children = (
+				D088D65E1ECBF09A0065D5AD /* Source */,
 				D09880E91EB9DFF200C0DC75 /* FRMvvmKit */,
 				D09880E81EB9DFF200C0DC75 /* Products */,
+				B893EA1107FB974B0B7DD7B5 /* Pods */,
+				65D9FCDB19EEEC2732742CF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D09880FE1EB9DFF200C0DC75 /* Build configuration list for PBXNativeTarget "FRMvvmKit-Demo" */;
 			buildPhases = (
+				F42E980B19091916E1694C9F /* [CP] Check Pods Manifest.lock */,
 				D09880E31EB9DFF200C0DC75 /* Sources */,
 				D09880E41EB9DFF200C0DC75 /* Frameworks */,
 				D09880E51EB9DFF200C0DC75 /* Resources */,
+				6A315598B4A88BFD45B6B3D5 /* [CP] Embed Pods Frameworks */,
+				93A606978C4E904CF4A1E440 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,12 +243,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A315598B4A88BFD45B6B3D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FRMvvmKit-Demo/Pods-FRMvvmKit-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A606978C4E904CF4A1E440 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FRMvvmKit-Demo/Pods-FRMvvmKit-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42E980B19091916E1694C9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D09880E31EB9DFF200C0DC75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D088D6681ECBF2CD0065D5AD /* FRViewModel.m in Sources */,
 				D09880F21EB9DFF200C0DC75 /* ViewController.m in Sources */,
+				D00A4DA61ECC414100BA1B11 /* FRViewController.m in Sources */,
+				D088D66B1ECBF3150065D5AD /* RVMViewModel.m in Sources */,
 				D09880EF1EB9DFF200C0DC75 /* AppDelegate.m in Sources */,
 				D09880EC1EB9DFF200C0DC75 /* main.m in Sources */,
 			);
@@ -271,6 +419,7 @@
 		};
 		D09880FF1EB9DFF200C0DC75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9B63D577791BE36D02CE67 /* Pods-FRMvvmKit-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AVQ8S7662K;
@@ -278,11 +427,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zengfxios.FRMvvmKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		D09881001EB9DFF200C0DC75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0206D0143995EB5F5A6D8A3F /* Pods-FRMvvmKit-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AVQ8S7662K;
@@ -290,6 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zengfxios.FRMvvmKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

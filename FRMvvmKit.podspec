@@ -18,7 +18,13 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   DESC
+  a framework of mvvm.
+
+  * Think: Why did you write this? What is the focus? What does it do?
+  * CocoaPods will be using this to generate tags, and improve search results.
+  * Try to keep it short, snappy and to the point.
+  * Finally, don't worry about the indent, CocoaPods strips it!
+  DESC
 
   s.homepage     = "https://github.com/zengfxios/fr-mvvm-kit"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"

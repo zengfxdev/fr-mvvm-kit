@@ -1,0 +1,6 @@
+framework module FRNetworkingWithRACKit {
+  umbrella header "FRNetworkingWithRACKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
