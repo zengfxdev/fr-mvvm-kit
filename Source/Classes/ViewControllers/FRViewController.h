@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FRViewControllerProtocol.h"
 
-@interface FRViewController : UIViewController
+@interface FRViewController : UIViewController<FRViewControllerProtocol>
 
 @end

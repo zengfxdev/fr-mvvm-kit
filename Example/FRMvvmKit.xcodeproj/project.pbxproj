@@ -25,6 +25,11 @@
 		2E9B63D577791BE36D02CE67 /* Pods-FRMvvmKit-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRMvvmKit-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRMvvmKit-Demo/Pods-FRMvvmKit-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A4DA41ECC414100BA1B11 /* FRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewController.h; sourceTree = "<group>"; };
 		D00A4DA51ECC414100BA1B11 /* FRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRViewController.m; sourceTree = "<group>"; };
+		D00A4DA71ECC435000BA1B11 /* FRViewToastProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewToastProtocol.h; sourceTree = "<group>"; };
+		D00A4DA81ECC436F00BA1B11 /* FRViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewControllerProtocol.h; sourceTree = "<group>"; };
+		D00A4DA91ECC448300BA1B11 /* FRViewNetworkStatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewNetworkStatusProtocol.h; sourceTree = "<group>"; };
+		D00A4DAA1ECC44EA00BA1B11 /* FRViewLoadingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewLoadingProtocol.h; sourceTree = "<group>"; };
+		D00A4DAB1ECC454000BA1B11 /* FRViewEmptyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewEmptyProtocol.h; sourceTree = "<group>"; };
 		D088D6661ECBF2CD0065D5AD /* FRViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModel.h; sourceTree = "<group>"; };
 		D088D6671ECBF2CD0065D5AD /* FRViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRViewModel.m; sourceTree = "<group>"; };
 		D088D6691ECBF3150065D5AD /* RVMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVMViewModel.h; sourceTree = "<group>"; };
@@ -82,6 +87,11 @@
 			children = (
 				D00A4DA41ECC414100BA1B11 /* FRViewController.h */,
 				D00A4DA51ECC414100BA1B11 /* FRViewController.m */,
+				D00A4DA81ECC436F00BA1B11 /* FRViewControllerProtocol.h */,
+				D00A4DA71ECC435000BA1B11 /* FRViewToastProtocol.h */,
+				D00A4DA91ECC448300BA1B11 /* FRViewNetworkStatusProtocol.h */,
+				D00A4DAA1ECC44EA00BA1B11 /* FRViewLoadingProtocol.h */,
+				D00A4DAB1ECC454000BA1B11 /* FRViewEmptyProtocol.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
