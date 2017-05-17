@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD5E4BC2BD032FFB26401DE4 /* Pods_FRMvvmKit_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B065BAF39608638F8DE4369 /* Pods_FRMvvmKit_Demo.framework */; };
 		D00A4DA61ECC414100BA1B11 /* FRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00A4DA51ECC414100BA1B11 /* FRViewController.m */; };
+		D00A4DAF1ECC506400BA1B11 /* NSObject+FRAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D00A4DAE1ECC506400BA1B11 /* NSObject+FRAssociatedObject.m */; };
 		D088D6681ECBF2CD0065D5AD /* FRViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D088D6671ECBF2CD0065D5AD /* FRViewModel.m */; };
 		D088D66B1ECBF3150065D5AD /* RVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D088D66A1ECBF3150065D5AD /* RVMViewModel.m */; };
 		D09880EC1EB9DFF200C0DC75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09880EB1EB9DFF200C0DC75 /* main.m */; };
@@ -30,6 +31,8 @@
 		D00A4DA91ECC448300BA1B11 /* FRViewNetworkStatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewNetworkStatusProtocol.h; sourceTree = "<group>"; };
 		D00A4DAA1ECC44EA00BA1B11 /* FRViewLoadingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewLoadingProtocol.h; sourceTree = "<group>"; };
 		D00A4DAB1ECC454000BA1B11 /* FRViewEmptyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewEmptyProtocol.h; sourceTree = "<group>"; };
+		D00A4DAD1ECC506400BA1B11 /* NSObject+FRAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FRAssociatedObject.h"; sourceTree = "<group>"; };
+		D00A4DAE1ECC506400BA1B11 /* NSObject+FRAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FRAssociatedObject.m"; sourceTree = "<group>"; };
 		D088D6661ECBF2CD0065D5AD /* FRViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRViewModel.h; sourceTree = "<group>"; };
 		D088D6671ECBF2CD0065D5AD /* FRViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRViewModel.m; sourceTree = "<group>"; };
 		D088D6691ECBF3150065D5AD /* RVMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVMViewModel.h; sourceTree = "<group>"; };
@@ -96,6 +99,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D00A4DAC1ECC4FA700BA1B11 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D00A4DAD1ECC506400BA1B11 /* NSObject+FRAssociatedObject.h */,
+				D00A4DAE1ECC506400BA1B11 /* NSObject+FRAssociatedObject.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
 		D088D65E1ECBF09A0065D5AD /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,7 @@
 		D088D6611ECBF09A0065D5AD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D00A4DAC1ECC4FA700BA1B11 /* Additions */,
 				D00A4DA31ECC40BF00BA1B11 /* ViewControllers */,
 				D088D6651ECBF2BC0065D5AD /* ViewModels */,
 			);
@@ -312,6 +325,7 @@
 				D088D66B1ECBF3150065D5AD /* RVMViewModel.m in Sources */,
 				D09880EF1EB9DFF200C0DC75 /* AppDelegate.m in Sources */,
 				D09880EC1EB9DFF200C0DC75 /* main.m in Sources */,
+				D00A4DAF1ECC506400BA1B11 /* NSObject+FRAssociatedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
