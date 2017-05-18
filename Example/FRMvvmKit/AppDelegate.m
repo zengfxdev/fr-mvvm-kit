@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DemoViewModel.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    DemoViewModel *viewmodel = [[DemoViewModel alloc] init];
+    ViewController *vc = [[ViewController alloc] initWithViewModel:viewmodel];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

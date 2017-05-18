@@ -141,10 +141,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showLoading {
     if (!_loadingOverlay) {
         _loadingOverlay = [[UIView alloc] initWithFrame:self.view.bounds];
-        _loadingOverlay.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+        
         UIView *contentView = nil;
-        if ([self respondsToSelector:@selector(customLoadingView)]) {
-            contentView = [self customLoadingView];
+        if ([self respondsToSelector:@selector(customLoadingView:)]) {
+            contentView = [self customLoadingView:_loadingOverlay];
         } else {
             contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
             contentView.layer.cornerRadius = 10;
@@ -164,8 +164,6 @@ NS_ASSUME_NONNULL_BEGIN
                 [loadingView startAnimating];
             }];
         }
-        [_loadingOverlay addSubview:contentView];
-        contentView.center = _loadingOverlay.center;
     }
     if (!_loadingOverlay.superview) {
         [self.view addSubview:_loadingOverlay];

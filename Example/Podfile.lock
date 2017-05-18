@@ -25,11 +25,13 @@ PODS:
   - FRNetworkingWithRACKit (0.0.1):
     - AFNetworking (~> 3.1.0)
     - ReactiveObjC (~> 3.0.0)
+  - Masonry (1.0.2)
   - ReactiveObjC (3.0.0)
 
 DEPENDENCIES:
   - FRLoggerKit
   - FRNetworkingWithRACKit
+  - Masonry (~> 1.0.0)
   - ReactiveObjC (~> 3.0.0)
 
 SPEC CHECKSUMS:
@@ -37,8 +39,9 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
   FRLoggerKit: 8f5488fcdc7e80bcc22796ea736c2788f6120dea
   FRNetworkingWithRACKit: 0a87790f0aead933dc82b74ff87fa4c4385f6846
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
 
-PODFILE CHECKSUM: d9c991cd1913ca3d7db31494fd2d2b12ad5f6924
+PODFILE CHECKSUM: 3d739b8688c61194da3df4846d688c26c25fb064
 
 COCOAPODS: 1.2.0

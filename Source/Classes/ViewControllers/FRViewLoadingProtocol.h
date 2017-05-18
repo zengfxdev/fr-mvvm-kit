@@ -19,7 +19,7 @@
  ＊    [submittingView rac_signalForSelector:@selector(didMoveToSuperview)]
  ＊  ]]
  */
-- (UIView *)customLoadingView;
+- (UIView *)customLoadingView:(UIView *)parentView;
 
 - (void)hideRetryView;
 

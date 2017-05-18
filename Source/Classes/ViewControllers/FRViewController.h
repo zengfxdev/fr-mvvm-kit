@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FRViewControllerProtocol.h"
 
+@class FRViewController;
 @interface UIViewController (FRViewController) <FRViewControllerProtocol>
 
 @end

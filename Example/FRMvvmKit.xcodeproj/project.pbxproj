@@ -18,6 +18,9 @@
 		D09880F51EB9DFF200C0DC75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09880F31EB9DFF200C0DC75 /* Main.storyboard */; };
 		D09880F71EB9DFF200C0DC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09880F61EB9DFF200C0DC75 /* Assets.xcassets */; };
 		D09880FA1EB9DFF200C0DC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09880F81EB9DFF200C0DC75 /* LaunchScreen.storyboard */; };
+		D0F0263E1ECD3E990075CBA2 /* FRViewController+FRDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0263D1ECD3E990075CBA2 /* FRViewController+FRDemo.m */; };
+		D0F026411ECD40240075CBA2 /* KMActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F026401ECD40240075CBA2 /* KMActivityIndicator.m */; };
+		D0F026441ECDA0F80075CBA2 /* DemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F026431ECDA0F80075CBA2 /* DemoViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,12 @@
 		D09880F61EB9DFF200C0DC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09880F91EB9DFF200C0DC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09880FB1EB9DFF200C0DC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F0263C1ECD3E990075CBA2 /* FRViewController+FRDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRViewController+FRDemo.h"; sourceTree = "<group>"; };
+		D0F0263D1ECD3E990075CBA2 /* FRViewController+FRDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FRViewController+FRDemo.m"; sourceTree = "<group>"; };
+		D0F0263F1ECD40240075CBA2 /* KMActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMActivityIndicator.h; sourceTree = "<group>"; };
+		D0F026401ECD40240075CBA2 /* KMActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMActivityIndicator.m; sourceTree = "<group>"; };
+		D0F026421ECDA0F80075CBA2 /* DemoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewModel.h; sourceTree = "<group>"; };
+		D0F026431ECDA0F80075CBA2 /* DemoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +184,8 @@
 		D09880E91EB9DFF200C0DC75 /* FRMvvmKit */ = {
 			isa = PBXGroup;
 			children = (
+				D0F0263F1ECD40240075CBA2 /* KMActivityIndicator.h */,
+				D0F026401ECD40240075CBA2 /* KMActivityIndicator.m */,
 				D09880ED1EB9DFF200C0DC75 /* AppDelegate.h */,
 				D09880EE1EB9DFF200C0DC75 /* AppDelegate.m */,
 				D09880F01EB9DFF200C0DC75 /* ViewController.h */,
@@ -184,6 +195,10 @@
 				D09880F81EB9DFF200C0DC75 /* LaunchScreen.storyboard */,
 				D09880FB1EB9DFF200C0DC75 /* Info.plist */,
 				D09880EA1EB9DFF200C0DC75 /* Supporting Files */,
+				D0F0263C1ECD3E990075CBA2 /* FRViewController+FRDemo.h */,
+				D0F0263D1ECD3E990075CBA2 /* FRViewController+FRDemo.m */,
+				D0F026421ECDA0F80075CBA2 /* DemoViewModel.h */,
+				D0F026431ECDA0F80075CBA2 /* DemoViewModel.m */,
 			);
 			path = FRMvvmKit;
 			sourceTree = "<group>";
@@ -322,10 +337,13 @@
 				D088D6681ECBF2CD0065D5AD /* FRViewModel.m in Sources */,
 				D09880F21EB9DFF200C0DC75 /* ViewController.m in Sources */,
 				D00A4DA61ECC414100BA1B11 /* FRViewController.m in Sources */,
+				D0F026411ECD40240075CBA2 /* KMActivityIndicator.m in Sources */,
+				D0F0263E1ECD3E990075CBA2 /* FRViewController+FRDemo.m in Sources */,
 				D088D66B1ECBF3150065D5AD /* RVMViewModel.m in Sources */,
 				D09880EF1EB9DFF200C0DC75 /* AppDelegate.m in Sources */,
 				D09880EC1EB9DFF200C0DC75 /* main.m in Sources */,
 				D00A4DAF1ECC506400BA1B11 /* NSObject+FRAssociatedObject.m in Sources */,
+				D0F026441ECDA0F80075CBA2 /* DemoViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
