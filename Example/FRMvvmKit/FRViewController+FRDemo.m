@@ -13,6 +13,9 @@
 
 @implementation FRViewController (FRDemo)
 
+
+
+#pragma mark - customLoadingView
 - (UIView *)customLoadingView:(UIView *)parentView{
     
     KMActivityIndicator *indicatorView = [[KMActivityIndicator alloc] initWithFrame:CGRectMake(0, 0, 56, 56)];
@@ -31,6 +34,7 @@
     }];
     return indicatorView;
 }
+
 
 
 @end

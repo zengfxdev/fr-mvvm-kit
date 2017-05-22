@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "NSObject+FRAssociatedObject.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACErrorSignal.h>
 #import "FRViewModelProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -190,17 +191,25 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)subscribeErrorSubject {
-    @weakify(self);
-    [[[self.viewModel.errorSubject takeUntil:[self rac_willDeallocSignal]]
+//    @weakify(self);
+    [[[[[self.viewModel.errorSubject takeUntil:[self rac_willDeallocSignal]]
       deliverOnMainThread]
-     subscribeNext:^(NSString *message) {
-        @strongify(self);
-        if (message && message.length > 0) {
-            NSLog(@"subscribeErrorSubject post:%@", message);
-            if ([self respondsToSelector:@selector(showError:)]) {
-                [self showError:message];
-            }
-        }
+     catch:^RACSignal *(NSError *error) {
+         // 处理error
+         NSDictionary *errorDict = error.userInfo;
+         if(errorDict){
+             RACTuple *errorTuple = [errorDict objectForKey:@"signal"];
+             RACSignal *errorSignal = errorTuple.first;
+             return [[RACErrorSignal error:error] concat:errorSignal];
+         }
+         else{
+             return [RACErrorSignal error:error];
+         }
+     }] doError:^(NSError * _Nonnull error) {
+         
+     }]
+     subscribeNext:^(NSError *error) {
+         NSLog(@"error:%@",error);
     }];
 }
 
