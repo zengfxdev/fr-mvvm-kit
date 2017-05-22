@@ -61,8 +61,8 @@
         requestSignal = [self rac_DELETE:relativePath parameters:parameters];
     }
     
-    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
+    RACSignal *newreqSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber)
+    {
         RACCompoundDisposable *disposable = [RACCompoundDisposable compoundDisposable];
         
         __block id lastSelfValue = nil;
@@ -99,11 +99,20 @@
         [disposable addDisposable:selfDisposable];
         
         return disposable;
-    }] catch:^RACSignal *(NSError *error) {
+    }];
+
+//    return newreqSignal;
+    return [newreqSignal catch:^RACSignal *(NSError *error) {
         if(error.code == FRApiResponseStatus_ErrorServer_TokenBlcakList){
-            NSLog(@"token过期!");
+            // 处理token过期
+            return [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                [subscriber sendNext:@"222"];
+                [subscriber sendCompleted];
+                return nil;
+            }] concat:newreqSignal];
         }
-        return [RACErrorSignal error:error];
+        return [RACSignal return:@"error"];
+//        return [RACErrorSignal error:error];
     }];
 }
 

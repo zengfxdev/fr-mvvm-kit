@@ -21,7 +21,7 @@
                                @"password":[@"yp123456" sha256String],
                                };
         
-        @weakify(self);
+//        @weakify(self);
 
         RACSignal *reqeustSignal = [[FRApiAppClient sharedClient] requestWithMethod:FRRequestMethodPost
                                             relativePath:@"/v1/authenticate"
