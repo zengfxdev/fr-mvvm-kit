@@ -91,7 +91,9 @@
         }] doError:^(NSError *error) {
             @strongify(self);
             self.loading = NO;
-            if (error.code == -1001 || error.code == -1004 || error.code == NSURLErrorNotConnectedToInternet) { // 超时重试
+            if (error.code == NSURLErrorTimedOut || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorNotConnectedToInternet)
+            {
+                // 超时,无网络
                 self.needRetryLoading = YES;
             } else {
                 [self.errorSubject sendError:error];
