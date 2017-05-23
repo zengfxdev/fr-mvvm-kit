@@ -19,7 +19,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         FRApiAppConfig *config = [FRApiAppConfig sharedConfig];
-        [config setRequestTimeoutInterval:120];
+        [config setRequestTimeoutInterval:5];
         [config setServerUrl:@"http://192.168.1.124:8003"];
         
         instance = [[FRApiAppClient alloc] initWithConfig:config];
@@ -100,8 +100,7 @@
         
         return disposable;
     }];
-
-//    return newreqSignal;
+    
     return [newreqSignal catch:^RACSignal *(NSError *error) {
         if(error.code == FRApiResponseStatus_ErrorServer_TokenBlcakList){
             // 处理token过期
@@ -111,8 +110,8 @@
                 return nil;
             }] concat:newreqSignal];
         }
-        return [RACSignal return:@"error"];
-//        return [RACErrorSignal error:error];
+//        return [RACSignal return:@"error"];
+        return [RACErrorSignal error:error];
     }];
 }
 

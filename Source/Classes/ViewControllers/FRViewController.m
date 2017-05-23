@@ -65,6 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
         [self subscribeSuccessSubject];
         [self subscribeErrorSubject];
         [self subscribeEmptySignal];
+        [self subscribeTryLoadingSignal];
         
         RACChannelTo(self, title) = RACChannelTo(self.viewModel, title);
     }
@@ -192,20 +193,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)subscribeErrorSubject {
 //    @weakify(self);
-    [[[[[self.viewModel.errorSubject takeUntil:[self rac_willDeallocSignal]]
-      deliverOnMainThread]
-     catch:^RACSignal *(NSError *error) {
-         // 处理error
-         NSDictionary *errorDict = error.userInfo;
-         if(errorDict){
-             RACTuple *errorTuple = [errorDict objectForKey:@"signal"];
-             RACSignal *errorSignal = errorTuple.first;
-             return [[RACErrorSignal error:error] concat:errorSignal];
-         }
-         else{
-             return [RACErrorSignal error:error];
-         }
-     }] doError:^(NSError * _Nonnull error) {
+    [[[[self.viewModel.errorSubject takeUntil:[self rac_willDeallocSignal]] deliverOnMainThread]
+      doError:^(NSError * _Nonnull error) {
          
      }]
      subscribeNext:^(NSError *error) {
@@ -214,7 +203,6 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 #pragma mark - subscribe view empty signal
-
 - (void)subscribeEmptySignal {
     @weakify(self);
     [[[RACObserve(self.viewModel, empty) skip:1] deliverOnMainThread] subscribeNext:^(NSNumber *value) {
@@ -240,6 +228,30 @@ NS_ASSUME_NONNULL_BEGIN
     } else {
         if ([self respondsToSelector:@selector(hideEmptyView)]) {
             [self hideEmptyView];
+        }
+    }
+}
+
+#pragma mark - subscribeTryLoadingSignal
+-(void)subscribeTryLoadingSignal{
+    @weakify(self);
+    [[[RACObserve(self.viewModel, needRetryLoading) skip:1] deliverOnMainThread] subscribeNext:^(NSNumber *value)
+    {
+        @strongify(self);
+        BOOL needRetryLoading = [value integerValue];
+        [self showTryLoading:needRetryLoading];
+    }];
+}
+
+-(void)showTryLoading:(BOOL)tryloading{
+    if(tryloading){
+        if( [self respondsToSelector:@selector(showRetryView)] ){
+            [self showRetryView];
+        }
+    }
+    else{
+        if( [self respondsToSelector:@selector(hideRetryView)] ){
+            [self hideRetryView];
         }
     }
 }

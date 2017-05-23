@@ -25,4 +25,6 @@
  *  @brief Shows the retry view or not, default is NO,
  */
 @property (nonatomic, assign) BOOL needRetryLoading;
+
+
 @end

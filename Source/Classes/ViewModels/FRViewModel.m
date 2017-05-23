@@ -91,18 +91,11 @@
         }] doError:^(NSError *error) {
             @strongify(self);
             self.loading = NO;
-            
-            [self.errorSubject sendError:[NSError errorWithDomain:@""
-                                                             code:error.code
-                                                         userInfo:@{
-                                                                    @"signal":[RACTuple tupleWithObjects:_loadingSignal, nil]
-                                                                    }]];
-            
-//            if (error.code == -1001 || error.code == -1004) { // 超时重试
-//                self.needRetryLoading = YES;
-//            } else {
-//                [self.errorSubject sendNext:error.localizedDescription];
-//            }
+            if (error.code == -1001 || error.code == -1004 || error.code == NSURLErrorNotConnectedToInternet) { // 超时重试
+                self.needRetryLoading = YES;
+            } else {
+                [self.errorSubject sendNext:error.localizedDescription];
+            }
         }];
     } else {
         _loadingSignal = nil;

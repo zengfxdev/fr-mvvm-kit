@@ -19,5 +19,4 @@
  *  @brief  Set empty=YES, shows the empty view with description.
  */
 - (void)setEmptyWithDescription:(NSString *)description;
-
 @end

@@ -21,38 +21,32 @@
                                @"password":[@"yp123456" sha256String],
                                };
         
-//        @weakify(self);
-
-        RACSignal *reqeustSignal = [[FRApiAppClient sharedClient] requestWithMethod:FRRequestMethodPost
-                                            relativePath:@"/v1/authenticate"
-                                              parameters:dict
-                                                needAuth:NO];
-        
-        [reqeustSignal subscribeNext:^(id  _Nullable x) {
-            NSLog(@"x:%@",x);
-        }];
-//        [[reqeustSignal catch:^RACSignal *(NSError *error) {
-//            return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-//                [subscriber sendNext:@"11"];
-//                [subscriber sendCompleted];
-//                return nil;
-//            }] concat:reqeustSignal];
-//        }] subscribeNext:^(id  x) {
+        @weakify(self);
+//        RACSignal *reqeustSignal = [[FRApiAppClient sharedClient] requestWithMethod:FRRequestMethodPost
+//                                            relativePath:@"/v1/authenticate"
+//                                              parameters:dict
+//                                                needAuth:NO];
+//        
+//        [[reqeustSignal doError:^(NSError *error) {
+//            @strongify(self);
+//            self.needRetryLoading = YES;
+//        }] subscribeNext:^(id x) {
 //            NSLog(@"x:%@",x);
 //        }];
         
-//        self.loadingSignal = [[[FRApiAppClient sharedClient] requestWithMethod:FRRequestMethodPost
-//                                                                 relativePath:@"/v1/authenticate"
-//                                                                   parameters:dict
-//                                                                     needAuth:NO]
-//                              doNext:^(id x) {
-//                                  NSLog(@"value:%@",x);
-//                              }];
+        self.loadingSignal = [[[FRApiAppClient sharedClient] requestWithMethod:FRRequestMethodPost
+                                                                 relativePath:@"/v1/authenticate"
+                                                                   parameters:dict
+                                                                     needAuth:NO]
+                              doNext:^(id x) {
+                                  NSLog(@"x:%@",x);
+                              }];
         
-//        [[self.didLayoutSubviewsSignal take:1] subscribeNext:^(id x) {
-//            @strongify(self);
-//            self.loading = YES;
-//        }];
+        [[self.didLayoutSubviewsSignal take:1] subscribeNext:^(id x) {
+            @strongify(self);
+            self.loading = YES;
+        }];
+        
     }
     return self;
 }
