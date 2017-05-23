@@ -94,7 +94,7 @@
             if (error.code == -1001 || error.code == -1004 || error.code == NSURLErrorNotConnectedToInternet) { // 超时重试
                 self.needRetryLoading = YES;
             } else {
-                [self.errorSubject sendNext:error.localizedDescription];
+                [self.errorSubject sendError:error];
             }
         }];
     } else {
