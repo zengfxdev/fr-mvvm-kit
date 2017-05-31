@@ -25,12 +25,18 @@ PODS:
   - FRNetworkingWithRACKit (0.0.1):
     - AFNetworking (~> 3.1.0)
     - ReactiveObjC (~> 3.0.0)
+  - LPDAdditionsKit (0.1.6)
+  - LPDTableViewKit (0.3.2):
+    - LPDAdditionsKit
+    - Masonry
+    - ReactiveObjC
   - Masonry (1.0.2)
   - ReactiveObjC (3.0.0)
 
 DEPENDENCIES:
   - FRLoggerKit
   - FRNetworkingWithRACKit
+  - LPDTableViewKit
   - Masonry (~> 1.0.0)
   - ReactiveObjC (~> 3.0.0)
 
@@ -39,9 +45,11 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
   FRLoggerKit: 8f5488fcdc7e80bcc22796ea736c2788f6120dea
   FRNetworkingWithRACKit: 0a87790f0aead933dc82b74ff87fa4c4385f6846
+  LPDAdditionsKit: 1782aee9bd9c6c114be018955e3e68e70862784b
+  LPDTableViewKit: 140bf3597299110fdd6506288573f2f8c25d505e
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
 
-PODFILE CHECKSUM: 3d739b8688c61194da3df4846d688c26c25fb064
+PODFILE CHECKSUM: dbaeb175fe6b742f618af834297f6549b5fa5cf2
 
 COCOAPODS: 1.2.0

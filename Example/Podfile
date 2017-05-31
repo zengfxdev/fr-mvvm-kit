@@ -4,6 +4,7 @@ def shared_pods
     pod 'FRLoggerKit'
     pod 'ReactiveObjC', '~> 3.0.0'
     pod 'FRNetworkingWithRACKit'
+    pod 'LPDTableViewKit'
     pod 'Masonry','~> 1.0.0'
 end
 

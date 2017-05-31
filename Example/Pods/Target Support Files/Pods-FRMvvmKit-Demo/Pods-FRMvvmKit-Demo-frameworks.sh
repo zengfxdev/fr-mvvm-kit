@@ -93,6 +93,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FRLoggerKit/FRLoggerKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FRNetworkingWithRACKit/FRNetworkingWithRACKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LPDAdditionsKit/LPDAdditionsKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LPDTableViewKit/LPDTableViewKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Masonry/Masonry.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveObjC/ReactiveObjC.framework"
 fi
@@ -101,6 +103,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FRLoggerKit/FRLoggerKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FRNetworkingWithRACKit/FRNetworkingWithRACKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LPDAdditionsKit/LPDAdditionsKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LPDTableViewKit/LPDTableViewKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Masonry/Masonry.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveObjC/ReactiveObjC.framework"
 fi
